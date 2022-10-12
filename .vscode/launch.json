@@ -1,0 +1,44 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch 8000 CurrencyExchangeServiceApplication",
+      "request": "launch",
+      "mainClass": "com.in28minutes.microservice.currencyexchangeservice.CurrencyExchangeServiceApplication",
+      "projectName": "currency-exchange-service",
+      "vmArgs": "-Dserver.port=8000"
+    },
+    {
+      "type": "java",
+      "name": "Launch 8001 CurrencyExchangeServiceApplication",
+      "request": "launch",
+      "mainClass": "com.in28minutes.microservice.currencyexchangeservice.CurrencyExchangeServiceApplication",
+      "projectName": "currency-exchange-service",
+      "vmArgs": "-Dserver.port=8001"
+    },
+    {
+      "type": "java",
+      "name": "Launch LimitsServiceApplication",
+      "request": "launch",
+      "mainClass": "com.in28minutes.microservices.limitsservice.LimitsServiceApplication",
+      "projectName": "limits-service"
+    },
+    {
+      "type": "java",
+      "name": "Launch SpringCloudConfigServerApplication",
+      "request": "launch",
+      "mainClass": "com.in28minutes.microservices.springcloudconfigserver.SpringCloudConfigServerApplication",
+      "projectName": "spring-cloud-config-server"
+    }
+  ]
+}
