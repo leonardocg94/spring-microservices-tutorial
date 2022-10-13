@@ -6,6 +6,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch CurrencyConversionServiceApplication",
+      "request": "launch",
+      "mainClass": "com.minutes.microservices.currencyconversionservice.CurrencyConversionServiceApplication"
+    },
+    {
+      "type": "java",
       "name": "Launch Current File",
       "request": "launch",
       "mainClass": "${file}"
