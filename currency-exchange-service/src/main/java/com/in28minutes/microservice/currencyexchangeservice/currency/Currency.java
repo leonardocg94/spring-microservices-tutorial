@@ -1,13 +1,22 @@
 package com.in28minutes.microservice.currencyexchangeservice.currency;
 
-public class Currency {
-  private String identifier;
-  private Double value;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
-  public Currency(String identifier, Double value) {
-    this.identifier = identifier;
-    this.value = value;
-  }
+@Entity
+public class Currency {
+
+  @Id
+  @GeneratedValue
+  private Integer id;
+  private String identifier;
+  @Column(name = "converted")
+  private Double value;
+  @ManyToOne
+  private CurrencyExchange exchange;
 
   public String getIdentifier() {
     return identifier;

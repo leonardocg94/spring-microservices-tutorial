@@ -2,14 +2,23 @@ package com.in28minutes.microservice.currencyexchangeservice.currency;
 
 import java.util.List;
 
-public class CurrencyExchange {
-  private String identifier;
-  private List<Currency> values;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
-  public CurrencyExchange(String identifier, List<Currency> values) {
-    this.identifier = identifier;
-    this.values = values;
-  }
+@Entity
+public class CurrencyExchange {
+
+  @Id
+  @GeneratedValue
+  private Integer id;
+  private String identifier;
+  @OneToMany(mappedBy = "exchange" , fetch = FetchType.EAGER)
+  @Column(name = "conversions")
+  private List<Currency> values;
 
   public String getIdentifier() {
     return identifier;
@@ -25,6 +34,14 @@ public class CurrencyExchange {
 
   public void setValues(List<Currency> values) {
     this.values = values;
+  }
+
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
   }
 
 }

@@ -1,10 +1,14 @@
 package com.in28minutes.microservice.currencyexchangeservice.currency;
 
 public class CurrencyExchangeResponse {
+
   private String from;
   private String to;
   private Double conversionMultiple;
   private String enviroment;
+
+  public CurrencyExchangeResponse() {
+  }
 
   public CurrencyExchangeResponse(String from, String to, Double conversionMultiple, String enviroment) {
     this.from = from;
