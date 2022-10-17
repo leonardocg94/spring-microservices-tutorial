@@ -44,7 +44,7 @@ public class CurrencyConversionController {
 
     CurrencyConversionResponse response = proxy.retrieveExchangeValue(from, to);   
     response.setQuantity(quantity);
-    response.setEnviroment(String.format("puerto:%s", enviroment.getProperty("local.server.port")));
+    // response.setEnviroment(String.format("puerto:%s", enviroment.getProperty("local.server.port")));
     response.calculateConversion();  
 
     return response;
